@@ -1,0 +1,66 @@
+<ion-view view-title="Trophies">
+  <ion-content id="trophy-page" class="padding">
+    <!-- <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher> -->
+    <div class="row">
+      <div class="col">
+        <button
+          class="button button-clear"
+          ng-click="present_trophies()"
+          ng-class="is_present_trophies ? 'trophy-button-active' : 'trophy-button'">
+            Your Trophies
+        </button>
+      </div>
+      <div class="col">
+        <button
+          class="button button-clear"
+          ng-click="future_trophies()"
+          ng-class="!is_present_trophies ? 'trophy-button-active' : 'trophy-button'">
+          Trophies to acquire
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-100">
+        <div ng-repeat="trophy in trophies" ng-show="is_present_trophies">
+          <div
+            class="list card"
+            ng-show="trophy.acquired">
+            <div class="item item-divider">{{trophy.title}}</div>
+            <div class="item item-body">
+              <div class="num_trophies"ng-if="is_present_trophies">
+                {{trophy.number}}x
+              </div>
+              <div class="ion-trophy-div">
+                <i class="icon ion-trophy {{trophy.color}}"></i>
+              </div>
+              <div>
+                {{trophy.description}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-100">
+        <div ng-repeat="trophy in trophies" ng-show="!is_present_trophies">
+          <div class="list card" ng-hide="trophy.acquired">
+            <div class="item item-divider">{{trophy.title}}</div>
+            <div class="item item-body">
+              <div class="num_trophies"ng-if="is_present_trophies">
+                {{trophy.number}}x
+              </div>
+              <div class="ion-trophy-div">
+                <i class="icon ion-trophy {{trophy.color}}"></i>
+              </div>
+              <div>
+                {{trophy.description}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

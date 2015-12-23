@@ -1,4 +1,22 @@
 {
   "name": "Press the Button",
-  "app_id": ""
+  "app_id": "ahshd",
+  "gulpStartupTasks": [
+    "sass",
+    "templatecache",
+    "ng_annotate",
+    "useref",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ]
 }

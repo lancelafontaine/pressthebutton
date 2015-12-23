@@ -1,0 +1,48 @@
+<ion-view view-title="Rankings">
+  <ion-content id="rankings-page" class="padding">
+
+    <div class="row">
+      <div class="col">
+        <button
+          class="button button-clear"
+          ng-click="most_presses()"
+          ng-class="is_most_presses ? 'trophy-button-active' : 'trophy-button'">
+            Most Button Presses
+        </button>
+      </div>
+      <div class="col">
+        <button
+          class="button button-clear"
+          ng-click="most_trophies()"
+          ng-class="!is_most_presses ? 'trophy-button-active' : 'trophy-button'">
+          Most Trophies
+        </button>
+      </div>
+    </div>
+
+    <div class="list card" ng-show="is_most_presses">
+      <div class="item item-divider">Most Button Presses</div>
+      <div class="item item-body">
+        <div class="ranking">
+          <span class="ranking-left">1.</span>
+          <span class="ranking-center">username1</span>
+          <span class="ranking-right">9765896754</span>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="list card" ng-show="!is_most_presses">
+      <div class="item item-divider">Most Trophies</div>
+      <div class="item item-body">
+        <div class="ranking">
+          <span class="ranking-left">1.</span>
+          <span>username2</span>
+          <span class="ranking-right">7754</span>
+        </div>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

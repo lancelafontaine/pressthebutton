@@ -1,14 +1,14 @@
 angular.module('starter.controllers', [])
 
-.controller('ButtonCtrl', function($scope) {
+.controller('ButtonCtrl', ['$scope', function($scope) {
   $scope.num_coins = 20;
 
   $scope.coin_drop = function () {
     $scope.num_coins -= 1;
   };
-})
+}])
 
-.controller('TrophiesCtrl', function($scope) {
+.controller('TrophiesCtrl', ['$scope', function($scope) {
 
   //$scope.$on('$ionicView.enter', function(e) {
   // query for trophies
@@ -46,15 +46,15 @@ angular.module('starter.controllers', [])
   $scope.future_trophies = function () {
     $scope.is_present_trophies = false;
   };
-})
-.controller('StatisticsCtrl', function($scope) {
+}])
+.controller('StatisticsCtrl', ['$scope', function($scope) {
 
   // $scope.settings = {
   //   enableFriends: true
   // };
-})
+}])
 
-.controller('RankingsCtrl', function($scope) {
+.controller('RankingsCtrl', ['$scope', function($scope) {
 
   $scope.is_most_presses = true;
 
@@ -67,8 +67,8 @@ angular.module('starter.controllers', [])
   };
 
 
-})
+}])
 
-.controller('SettingsCtrl', function($scope) {})
+.controller('SettingsCtrl', ['$scope', function($scope) {}])
 
 ;

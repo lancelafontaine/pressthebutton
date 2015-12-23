@@ -1,0 +1,27 @@
+<ion-view view-title="Button">
+  <ion-content class="padding" scroll="false">
+    <div id="thebutton_row" class="row row-bottom">
+      <div id="thebutton_div" class="col-center">
+        <button id="thebutton" class="button button-block " ng-click="coin_drop()">Press the Button</button>
+      </div>
+    </div>
+    <div id="coin_xp_row" class="row">
+      <div class="col col-20">
+        <div id="coins_div ">
+          <i id="coins_icon" class="icon ion-cube"></i><span id="coins">{{num_coins}}</span>
+        </div>
+        <div id="lvl_div">
+          <span id='lvl'>LVL: 1</span>
+        </div>
+      </div>
+      <div class="col col-80">
+        <div class="progress">
+          <div class="progress-bar" style="width: 25%">
+            <span id="xp">XP: 345</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
