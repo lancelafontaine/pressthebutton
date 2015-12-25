@@ -3,7 +3,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-ion-content {
+ion-content, .content-stable {
   background-color: #387ef5;
 }
 
@@ -48,19 +48,18 @@ progress {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
-  -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
-  box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+  -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1);
+  -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1);
+  box-shadow: 0px 9px 0px rgba(219,31,5,1);
 	text-align: center;
-
 }
 
 #thebutton:active {
-    -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
-    -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
-    box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
-    position: relative;
-    top: 6px;
+  -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1);
+  -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1);
+  box-shadow: 0px 3px 0px rgba(219,31,5,1);
+  position: relative;
+  top: 6px;
 }
 
 #coin_xp_row {
